@@ -264,27 +264,24 @@
 
         /* Стили кнопки "Арендовать" */
         .cta-button {
-    width: 100%;
-    padding: 16px 22px;
-    font-size: 18px;
+    display: block;
+    margin: 30px auto 0; /* Увеличенный отступ сверху */
+    padding: 16px 32px;
+    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    color: #000;
+    background: linear-gradient(74deg, rgba(122, 215, 178, 1) 16%, rgba(60, 175, 199, 1) 89%);
+    color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    background: linear-gradient(74deg, rgba(154,242,207,1) 12%, rgba(60,214,246,1) 93%);
-    background-size: 200% 200%;
-    animation: softGlow 3s infinite alternate;
-    box-shadow: 0 4px 10px rgba(60, 214, 246, 0.4);
+    transition: all 0.3s ease;
+    box-shadow: 0px 8px 18px rgba(60, 175, 199, 0.6);
 }
 
-/* Эффект наведения */
 .cta-button:hover {
-    background: linear-gradient(74deg, rgba(60,214,246,1) 12%, rgba(154,242,207,1) 93%);
     transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(60, 214, 246, 0.5);
+    box-shadow: 0px 10px 24px rgba(60, 175, 199, 0.7);
 }
 
 /* Анимация мягкого сияния */
@@ -313,12 +310,6 @@
             justify-content: center;
         }
 
-
-        /* Блок описания яхты */
-/* Общий стиль */
-/* Общий стиль */
-/* Общий стиль */
-/* Общий стиль */
 /* Общий стиль */
 .yacht-features,
 .yacht-safety {
@@ -924,110 +915,221 @@
     });
     </script>
 
-        <div class="yacht-info">
-            <div class="yacht-title-container">
-                <h1 class="yacht-title">HERMES</h1>
-                <div class="yacht-specs">
-                    <span class="spec-tag">12 человек</span>
-                    <span class="spec-tag">19 метров</span>
-                </div>
+<div class="yacht-info">
+    <div class="yacht-title-container">
+        <h1 class="yacht-title">HERMES</h1>
+        <div class="yacht-specs">
+            <span class="spec-tag">12 человек</span>
+            <span class="spec-tag">19 метров</span>
+        </div>
+    </div>
+
+    <div class="price-section">
+        <div class="price-box price-unified">
+            <span class="price-inner"><strong>30 000</strong> ₽/ЧАС</span>
+        </div>
+    </div>
+
+    <h2 class="compact-title">🛥️ Премиальная яхта HERMES</h2>
+
+    <p class="compact-intro">
+        Погрузитесь в атмосферу комфорта и роскоши на борту <b>19-метровой яхты HERMES</b>. 
+        Идеальное место для <b>элитного отдыха, деловых встреч и торжественных мероприятий</b>.
+    </p>
+
+    <!-- Блок удобств -->
+    <div class="compact-grid">
+        <div class="compact-block">
+            <h3>✨ Удобства</h3>
+            <ul class="compact-list">
+                <li><span class="sm-icon">🛟</span><b>Вместимость:</b>&nbsp;до 12 гостей</li>
+                <li><span class="sm-icon">🛏️</span><b>Комнаты:</b>&nbsp;4 каюты, флайбридж</li>
+                <li><span class="sm-icon">☀</span><b>Загар:</b>&nbsp;носовая часть, купальная площадка</li>
+                <li><span class="sm-icon">🚿</span><b>Санузлы:</b>&nbsp;2 туалета, 2 душевые</li>
+                <li><span class="sm-icon">🎶</span><b>Аудио:</b>&nbsp;Bluetooth + сабвуфер</li>
+                <li><span class="sm-icon">🛋️</span><b>Удобства:</b>&nbsp;пледы, обогрев</li>
+                <li><span class="sm-icon">❄️</span><b>Холодильник:</b>&nbsp;с ледогенератором</li>
+                <li><span class="sm-icon">🍽️</span><b>Кухня:</b>&nbsp;плита, чайник, гриль</li>
+                <li><span class="sm-icon">🥂</span><b>Посуда:</b>&nbsp;бокалы, сервировка</li>
+                <li><span class="sm-icon">🦺</span><b>Безопасность:</b>&nbsp;жилеты, аптечка</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Отдельный блок для минимального времени аренды с увеличенным отступом -->
+    <div class="rental-info">
+        <p style="margin-top: 20px;">Минимальное время аренды: <strong>1 час</strong></p>
+    </div>
+
+    <!-- Блоки "Разрешено", "Запрещено" и "Безопасность" -->
+    <div class="rules-container">
+        <!-- Блок Разрешено -->
+        <div class="rules-block allowed">
+            <h3 class="rules-title">✅ Разрешено</h3>
+            <ul class="rules-list">
+                <li><span class="icon">✔️</span> Еда и напитки</li>
+                <li><span class="icon">✔️</span> Электронки и IQOS</li>
+            </ul>
+        </div>
+    
+        <!-- Блок Запрещено -->
+        <div class="rules-block prohibited">
+            <h3 class="rules-title">🚫 Запрещено</h3>
+            <ul class="rules-list">
+                <li><span class="icon">❌</span> Кальян, сигареты</li>
+                <li><span class="icon">❌</span> Красное вино</li>
+                <li><span class="icon">❌</span> Продукты, оставляющие пятна (голубика, черника, черешня и др.)</li>
+            </ul>
+        </div>
+    
+        <!-- Блок Безопасность -->
+        <div class="rules-block safety">
+            <h3 class="rules-title">⚓ Безопасность</h3>
+            <ul class="rules-list">
+                <li><span class="icon">✅</span> Лицензированная деятельность</li>
+                <li><span class="icon">🎓</span> Опытный экипаж</li>
+                <li><span class="icon">📜</span> Соблюдение норм безопасности</li>
+            </ul>
+        </div>
+    </div>
+
+    <button class="cta-button" id="rent-button">Арендовать</button>
+
+ <!-- Всплывающее окно бронирования -->
+<div class="booking-popup" id="booking-popup" itemscope itemtype="https://schema.org/BoatRental">
+    <div class="booking-content">
+        <button class="booking-close" id="booking-close" aria-label="Закрыть форму бронирования">✖</button>
+        <h2 itemprop="name">ОФОРМИТЬ</h2>
+
+        <div class="booking-image">
+            <img src="" alt="Бронирование яхты" id="booking-boat-img" itemprop="image">
+        </div>
+
+        <h3 id="booking-boat-name" itemprop="serviceType">Название яхты</h3>
+
+        <form id="booking-form" method="POST" action="/submit-booking" itemscope itemtype="https://schema.org/Action">
+            <meta itemprop="instrument" content="Онлайн-заявка">
+            <div class="booking-inputs">
+                <input type="text" id="name" placeholder="Иван" required itemprop="agent" aria-label="Введите имя">
+                <input type="tel" id="phone" placeholder="+79819999919" required itemprop="telephone" aria-label="Введите номер телефона">
+                <textarea id="comment" placeholder="Берем на 5 человек" itemprop="description" aria-label="Введите комментарий"></textarea>
             </div>
 
-            <div class="price-section">
-    <div class="price-box price-unified">
-        <span>ПН-ВС</span>
-        <span class="price-inner"><strong>30 000</strong> ₽/ЧАС</span>
+            <div class="booking-checkbox">
+                <input type="checkbox" id="policy" required>
+                <label for="policy">Согласен с <a href="политика.pdf" target="_blank" rel="noopener nofollow">политикой конфиденциальности</a></label>
+            </div>
+
+            <button type="submit" id="submit-btn" disabled itemprop="potentialAction" aria-label="Отправить заявку на аренду">Отправить заявку</button>
+        </form>
     </div>
 </div>
 
-<h2 class="section-title">На борту:</h2>
-<div class="amenities-list">
-    <div class="amenity"><i class="fas fa-music"></i> Музыка: колонки + сабвуфер, Bluetooth</div>
-    <div class="amenity"><i class="fas fa-umbrella"></i> Пледы, обогрев каюты и палубы</div>
-    <div class="amenity"><i class="fas fa-bed"></i> Лежаки</div>
-    <div class="amenity"><i class="fas fa-snowflake"></i> Кондиционер</div>
-    <div class="amenity"><i class="fas fa-fire"></i> Печка</div>
-    <div class="amenity"><i class="fas fa-ice-cream"></i> Холодильник</div>
-    <div class="amenity"><i class="fas fa-snowflake"></i> Ледогенератор (доп. услуга)</div>
-    <div class="amenity"><i class="fas fa-fire"></i> Газовая плита, чайник, гриль (доп. услуга)</div>
-    <div class="amenity"><i class="fas fa-glass-martini"></i> Бокалы, штопор, посуда (доп. услуга)</div>
-    <div class="amenity"><i class="fas fa-life-ring"></i> Жилеты, аптечка</div>
-    <div class="amenity"><i class="fas fa-user-tie"></i> Капитан и стюард</div>
+<!-- Затемняющий фон -->
+<div class="popup-overlay" id="popup-overlay" aria-hidden="true"></div>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    // Кнопка аренды на отдельной странице яхты
+    const rentButton = document.getElementById("rent-button");
+    const modal = document.getElementById("booking-popup");
+    const overlay = document.getElementById("popup-overlay");
+    const closeModal = document.getElementById("booking-close");
+    const submitBtn = document.getElementById("submit-btn");
+    const policyCheckbox = document.getElementById("policy");
+    const bookingForm = document.getElementById("booking-form");
+    const boatImage = document.getElementById("booking-boat-img");
+    const boatName = document.getElementById("booking-boat-name");
+
+    if (rentButton) {
+        rentButton.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // Указываем название и изображение яхты вручную
+            boatName.textContent = "HERMES";
+            boatImage.src = "yacht-hecmes.jpg"; 
+
+            modal.classList.add("active");
+            overlay.classList.add("active");
+        });
+    }
+
+    // Закрытие модального окна
+    function closeBooking() {
+        modal.classList.remove("active");
+        overlay.classList.remove("active");
+    }
+
+    closeModal.addEventListener("click", closeBooking);
+    overlay.addEventListener("click", closeBooking);
+
+    // Включение кнопки "Отправить" только при согласии с политикой
+    policyCheckbox.addEventListener("change", function () {
+        submitBtn.disabled = !this.checked;
+    });
+
+    // **Отправка заявки**
+    bookingForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const userName = document.getElementById("name").value.trim();
+        const userPhone = document.getElementById("phone").value.trim();
+        const userComment = document.getElementById("comment").value.trim();
+
+        if (!userName || !userPhone) {
+            alert("Заполните имя и телефон!");
+            return;
+        }
+
+        submitBtn.textContent = "Отправка...";
+        submitBtn.classList.add("loading");
+        submitBtn.setAttribute("disabled", "true");
+
+        // Формируем сообщение для Telegram
+        const message = `
+🚤 *Новая заявка на аренду!*
+🛥️ Яхта: *HERMES*
+👤 Имя: *${userName}*
+📞 Телефон: *${userPhone}*
+📝 Комментарий: ${userComment || "Не указан"}
+        `;
+
+        fetch(`https://api.telegram.org/bot5807422883:AAGkbgd6-bUeFRkguNHaJwZ77auV1XjAV7c/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id: "1301142907",
+                text: message,
+                parse_mode: "Markdown"
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.ok) {
+                alert("✅ Заявка успешно отправлена!");
+                bookingForm.reset();
+                closeBooking();
+            } else {
+                alert("❌ Ошибка при отправке. Попробуйте снова.");
+                submitBtn.textContent = "Отправить заявку";
+                submitBtn.classList.remove("loading");
+                submitBtn.removeAttribute("disabled");
+            }
+        })
+        .catch(error => {
+            alert("❌ Ошибка при отправке. Попробуйте позже.");
+            submitBtn.textContent = "Отправить заявку";
+            submitBtn.classList.remove("loading");
+            submitBtn.removeAttribute("disabled");
+        });
+    });
+});
+</script>
+    <div class="location">
+        <i class="fas fa-map-marker-alt"></i>
+        📍Яхт клуб Бриз, Уральская 13У
+    </div>
 </div>
-
-            <div class="rental-info">
-                <p>Минимальное время аренды: <strong>1 час</strong></p>
-            </div>
-
-            <button class="cta-button" id="rent-button">Арендовать</button>
-
-            <div class="location">
-                <i class="fas fa-map-marker-alt"></i>
-                📍Яхт клуб Бриз, Уральская 13У
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="yacht-description">
-        <h2 class="compact-title">🛥️ Премиальная яхта HERMES</h2>
-    
-        <p class="compact-intro">
-            Погрузитесь в атмосферу комфорта и роскоши на борту <b>19-метровой яхты HERMES</b>. 
-            Идеальное место для <b>элитного отдыха, деловых встреч и торжественных мероприятий</b>.
-        </p>
-    
-        <div class="compact-grid">
-            <div class="compact-block">
-                <h3>✨ Удобства</h3>
-                <ul class="compact-list">
-                    <li><span class="sm-icon">🛟</span><b>Вместимость:</b>&nbsp;до 12 гостей</li>
-<li><span class="sm-icon">🛏️</span><b>Комнаты:</b>&nbsp;4 каюты, флайбридж</li>
-<li><span class="sm-icon">☀</span><b>Загар:</b>&nbsp;носовая часть, купальная площадка</li>
-<li><span class="sm-icon">🚿</span><b>Санузлы:</b>&nbsp;2 туалета, 2 душевые</li>
-<li><span class="sm-icon">🎶</span><b>Аудио:</b>&nbsp;Bluetooth + сабвуфер</li>
-<li><span class="sm-icon">🛋️</span><b>Удобства:</b>&nbsp;пледы, обогрев</li>
-<li><span class="sm-icon">❄️</span><b>Холодильник:</b>&nbsp;с ледогенератором</li>
-<li><span class="sm-icon">🍽️</span><b>Кухня:</b>&nbsp;плита, чайник, гриль</li>
-<li><span class="sm-icon">🥂</span><b>Посуда:</b>&nbsp;бокалы, сервировка</li>
-<li><span class="sm-icon">🦺</span><b>Безопасность:</b>&nbsp;жилеты, аптечка</li>
-                </ul>
-            </div>
-    
-            <div class="rules-container">
-                <!-- Блок Разрешено -->
-                <div class="rules-block allowed">
-                    <h3 class="rules-title">✅ Разрешено</h3>
-                    <ul class="rules-list">
-                        <li><span class="icon">✔️</span> Еда и напитки</li>
-                        <li><span class="icon">✔️</span> Электронки и IQOS</li>
-                    </ul>
-                </div>
-            
-                <!-- Блок Запрещено -->
-                <div class="rules-block prohibited">
-                    <h3 class="rules-title">🚫 Запрещено</h3>
-                    <ul class="rules-list">
-                        <li><span class="icon">❌</span> Кальян, сигареты</li>
-                        <li><span class="icon">❌</span> Красное вино</li>
-                        <li><span class="icon">❌</span> Продукты, оставляющие пятна (голубика, черника, черешня и др.)</li>
-                    </ul>
-                </div>
-            
-                <!-- Блок Безопасность -->
-                <div class="rules-block safety">
-                    <h3 class="rules-title">⚓ Безопасность</h3>
-                    <ul class="rules-list">
-                        <li><span class="icon">✅</span> Лицензированная деятельность</li>
-                        <li><span class="icon">🎓</span> Опытный экипаж</li>
-                        <li><span class="icon">📜</span> Соблюдение норм безопасности</li>
-                    </ul>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
     <style>
 
 .rules-container {
