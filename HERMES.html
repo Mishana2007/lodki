@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<style>
+    <style>
         body {
     font-family: 'Arial', sans-serif;
     color: #333;
@@ -156,18 +156,18 @@
 }
 
 .spec-tag {
-    background: rgb(122,215,178);
-    background: linear-gradient(74deg, rgba(122,215,178,1) 0%, rgba(129,222,242,1) 100%);
+    background: rgb(210,231,29);
+    background: linear-gradient(119deg, rgba(210,231,29,1) 28%, rgba(175,207,49,1) 63%);
     background-size: 300% 300%;
-    color: white;
-    padding: 4px 12px; /* Чуть шире для лучшей читабельности */
-    border-radius: 8px; /* Уменьшено для аккуратности */
-    font-size: 14px;
+    color: black; /* Черный цвет шрифта для лучшей контрастности */
+    padding: 6px 14px; /* Чуть больше для удобочитаемости */
+    border-radius: 10px; /* Немного закруглил для современного вида */
+    font-size: 15px; /* Чуть больше для улучшенной читаемости */
     font-weight: bold;
     text-transform: uppercase;
-    transition: 0.5s ease-in-out;
+    transition: 0.4s ease-in-out;
     animation: smoothFlow 4s infinite linear;
-    box-shadow: 0px 2px 8px rgba(122, 215, 178, 0.5);
+    box-shadow: 0px 2px 8px rgba(210, 231, 29, 0.4);
 }
 
 /* Анимация плавного движения градиента */
@@ -180,7 +180,7 @@
 /* Эффект при наведении */
 .spec-tag:hover {
     transform: scale(1.1);
-    box-shadow: 0px 4px 12px rgba(129, 222, 242, 0.6);
+    box-shadow: 0px 4px 12px rgba(175, 207, 49, 0.6);
 }
 
 .section-title {
@@ -214,53 +214,42 @@
 .price-section {
     display: flex;
     justify-content: center;
-    margin: 30px auto;
-    max-width: 640px;
+    margin: 40px auto;
+    max-width: 800px; /* Увеличиваем ширину блока */
 }
 
+/* Основной блок цены */
 .price-box {
-    background: linear-gradient(74deg, rgba(122, 215, 178, 1) 16%, rgba(60, 175, 199, 1) 89%);
-    color: white;
-    padding: 16px 36px;
-    border-radius: 50px;
+    background: white; /* Белый фон */
+    padding: 18px 36px; /* Чуть уменьшил размер */
+    border-radius: 50px; /* Овальная форма */
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 28px; /* Размер текста */
     transition: all 0.3s ease;
-    box-shadow: 0px 8px 18px rgba(60, 175, 199, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 260px;
+    min-width: 280px; /* Чуть уменьшил */
+    text-align: center;
+    border: 2px solid black; /* Менее жирный контур */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Сделал тень мягче */
+}
+
+/* Внутренний блок с ценой */
+.price-inner {
+    background: transparent; /* Прозрачный фон */
+    font-size: 32px; /* Чуть уменьшил размер текста */
+    color: black; /* Черный текст */
+    font-weight: bold;
     text-align: center;
 }
 
+/* Анимация при наведении */
 .price-box:hover {
     transform: scale(1.05);
-    box-shadow: 0px 10px 24px rgba(60, 175, 199, 0.7);
+    box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.2); /* Чуть менее агрессивный эффект */
 }
-
-.price-inner {
-    background: white;
-    padding: 10px 24px;
-    border-radius: 42px;
-    font-size: 28px;
-    margin-left: 12px;
-    color: #0F6587; /* Сделал цвет цифр насыщенным */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    font-weight: bold;
-}
-
-.price-inner strong {
-    font-weight: 900;
-    letter-spacing: -0.4px;
-}
-
-.price-box span:first-child {
-    text-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    font-size: 24px;
-}
-
 
         /* Стили кнопки "Арендовать" */
         .cta-button {
@@ -270,27 +259,33 @@
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-    background: linear-gradient(74deg, rgba(122, 215, 178, 1) 16%, rgba(60, 175, 199, 1) 89%);
-    color: white;
+    background: rgb(230,255,10);
+    background: linear-gradient(119deg, rgba(230,255,10,1) 40%, rgba(200,223,108,1) 84%);
+    color: black; /* Чёрный цвет шрифта для лучшей читаемости */
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0px 8px 18px rgba(60, 175, 199, 0.6);
+    box-shadow: 0px 8px 18px rgba(200, 223, 108, 0.4);
+    width: fit-content;
+    min-width: 180px; /* Добавил минимальную ширину для лучшей структуры */
+    text-align: center;
 }
 
+/* Эффект при наведении */
 .cta-button:hover {
+    background: linear-gradient(119deg, rgba(200,223,108,1) 40%, rgba(230,255,10,1) 84%);
     transform: scale(1.05);
-    box-shadow: 0px 10px 24px rgba(60, 175, 199, 0.7);
+    box-shadow: 0px 10px 24px rgba(230, 255, 10, 0.6);
 }
 
 /* Анимация мягкого сияния */
 @keyframes softGlow {
     0% {
-        box-shadow: 0 4px 10px rgba(60, 214, 246, 0.3);
+        box-shadow: 0 4px 10px rgba(230, 255, 10, 0.3);
     }
     100% {
-        box-shadow: 0 6px 15px rgba(154, 242, 207, 0.5);
+        box-shadow: 0 6px 15px rgba(200, 223, 108, 0.5);
     }
 }
 
@@ -722,107 +717,107 @@
     </section>
     
     <style>
-    /* Основной контейнер */
-    .yacht-slider {
-        text-align: center;
-        max-width: 900px;
-        margin: auto;
-        padding: 20px 0;
-        position: relative;
-        margin-top: 40px;
-    }
-    
-    /* Обертка слайдера */
-    .slider-container {
-        overflow: hidden;
-        width: 100%;
-        max-width: 800px;
-        height: auto;
-        position: relative;
-        touch-action: pan-y;
-    }
-    
-    /* Лента изображений */
-    .slider-track {
-        display: flex;
-        transition: transform 0.4s ease-in-out;
-        will-change: transform;
-    }
-    
-    /* Улучшенное качество изображений */
-    .slider-image {
-        width: 100%;
-        max-width: 800px;
-        height: auto;
-        max-height: 500px;
-        flex-shrink: 0;
-        border-radius: 10px;
-        object-fit: cover;
-        user-select: none;
-        pointer-events: none;
-    }
-    
-    /* Миниатюры (8 фото в 2 ряда) */
-    .thumbnails-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
-        max-width: 400px;
-        margin: 15px auto;
-    }
-    
-    /* Миниатюры */
-    .thumbnail {
-        width: 90px;
-        height: 60px;
-        object-fit: cover;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: transform 0.2s, opacity 0.2s;
-        border: 2px solid transparent;
-    }
-    
-    /* Выбранное фото */
-    .thumbnail.active {
-        border-color: #4caf50;
-        transform: scale(1.1);
-    }
-    
-    /* Адаптация для мобильных */
-    @media (max-width: 768px) {
+        /* Основной контейнер */
+        .yacht-slider {
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            padding: 20px 0;
+            position: relative;
+            margin-top: 40px;
+        }
+        
+        /* Обертка слайдера */
         .slider-container {
+            overflow: hidden;
+            width: 100%;
+            max-width: 800px;
             height: auto;
+            position: relative;
+            touch-action: pan-y;
         }
+        
+        /* Лента изображений */
+        .slider-track {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+            will-change: transform;
+        }
+        
+        /* Улучшенное качество изображений */
         .slider-image {
+            width: 100%;
+            max-width: 800px;
             height: auto;
-            max-height: 300px;
+            max-height: 500px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            object-fit: cover;
+            user-select: none;
+            pointer-events: none;
         }
+        
+        /* Миниатюры (8 фото в 2 ряда) */
         .thumbnails-grid {
-            max-width: 320px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+            max-width: 400px;
+            margin: 15px auto;
         }
+        
+        /* Миниатюры */
         .thumbnail {
-            width: 70px;
-            height: 50px;
+            width: 90px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s, opacity 0.2s;
+            border: 2px solid transparent;
         }
-    }
-    
-    @media (max-width: 480px) {
-        .slider-container {
-            height: auto;
+        
+        /* Выбранное фото */
+        .thumbnail.active {
+            border-color: #4caf50;
+            transform: scale(1.1);
         }
-        .slider-image {
-            height: auto;
-            max-height: 250px;
+        
+        /* Адаптация для мобильных */
+        @media (max-width: 768px) {
+            .slider-container {
+                height: auto;
+            }
+            .slider-image {
+                height: auto;
+                max-height: 300px;
+            }
+            .thumbnails-grid {
+                max-width: 320px;
+            }
+            .thumbnail {
+                width: 70px;
+                height: 50px;
+            }
         }
-        .thumbnails-grid {
-            max-width: 280px;
+        
+        @media (max-width: 480px) {
+            .slider-container {
+                height: auto;
+            }
+            .slider-image {
+                height: auto;
+                max-height: 250px;
+            }
+            .thumbnails-grid {
+                max-width: 280px;
+            }
+            .thumbnail {
+                width: 65px;
+                height: 45px;
+            }
         }
-        .thumbnail {
-            width: 65px;
-            height: 45px;
-        }
-    }
-    </style>
+        </style>
     
     <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -940,7 +935,7 @@
     <!-- Блок удобств -->
     <div class="compact-grid">
         <div class="compact-block">
-            <h3>✨ Удобства</h3>
+            <h3>✨ На борту</h3>
             <ul class="compact-list">
                 <li><span class="sm-icon">🛟</span><b>Вместимость:</b>&nbsp;до 12 гостей</li>
                 <li><span class="sm-icon">🛏️</span><b>Комнаты:</b>&nbsp;4 каюты, флайбридж</li>
@@ -1130,260 +1125,260 @@
         📍Яхт клуб Бриз, Уральская 13У
     </div>
 </div>
-    <style>
+<style>
 
-.rules-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px; /* Увеличиваем отступы между блоками */
-    max-width: 95%; /* Немного расширяем контейнер */
-    margin: auto;
-}
-
-.rules-block {
-    background: #ffe6e6;
-    border-left: 6px solid #d9534f;
-    padding: 18px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    max-width: 500px; /* Расширил блок */
-    margin: 0 auto;
-}
-
-.rules-title {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #d9534f;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.rules-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.rules-list li {
-    display: flex;
-    align-items: flex-start;
-    font-size: 16px;
-    margin-bottom: 6px;
-    line-height: 1.5;
-}
-
-.icon {
-    font-size: 18px;
-    margin-right: 10px;
-    min-width: 24px;
-}
-
-/* Делаем адаптацию для телефонов */
-@media (max-width: 480px) {
-    .rules-block {
-        max-width: 95%; /* Даем блокам больше пространства на мобильных */
-    }
-
-    .rules-title {
-        font-size: 1.3rem;
-    }
-
-    .rules-list li {
-        font-size: 1rem; /* Чуть уменьшаем размер на маленьких экранах */
-    }
-
-    .icon {
-        font-size: 1.4rem;
-    }
-}
-
-
-.rules-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Выравниваем текст по левому краю */
-    max-width: 95%; /* Чуть увеличим ширину, но не слишком */
-    padding: 10px 15px; /* Оптимальные отступы */
-    font-size: 0.9rem; /* Немного уменьшим размер шрифта */
-    line-height: 1.4; /* Делаем расстояние между строками приятным */
-}
-
-.rules-item {
-    display: flex;
-    align-items: center; /* Выравниваем иконки и текст */
-    gap: 10px; /* Отступ между иконкой и текстом */
-}
-
-.rules-item:last-child {
-    flex-wrap: wrap; /* Позволяет длинному тексту красиво переноситься */
-    max-width: 100%; /* Запрещаем сжатие блока */
-}
-
-.rules-item span {
-    flex-shrink: 0; /* Иконка не сжимается */
-    font-size: 1.2rem; /* Немного увеличим размер иконок */
-    min-width: 25px; /* Чтобы иконка всегда была ровно */
-}
-
-.rules-list li .icon {
-    flex-shrink: 0; /* Запрещаем иконке сжиматься */
-    width: 22px; /* Оптимальный размер для четкого выравнивания */
-    height: 22px;
-    text-align: center;
-}
-
-.rules-list li .text {
-    flex-grow: 1; /* Растягиваем текст, чтобы он ровно вставал */
-    max-width: 100%; /* Запрещаем выходить за пределы блока */
-    overflow: hidden; /* Обрезаем длинный текст */
-    text-overflow: ellipsis; /* Добавляем ... если текст слишком длинный */
-}
-
-/* Иконки */
-.icon {
-    font-size: 1.2rem;
-    min-width: 25px;
-    display: inline-block;
-    margin-right: 6px;
-    text-align: center;
-}
-
-/* Цвета и оформление */
-.allowed {
-    background: #e6f4ea;
-    border-left: 4px solid #2f855a;
-    padding: 8px 12px; /* Уменьшил отступы */
-}
-
-.prohibited {
-    background: #ffebee;
-    border-left: 4px solid #b71c1c;
-    padding: 8px 12px; /* Уменьшил отступы */
-}
-
-.safety {
-    background: #e3f2fd;
-    border-left: 4px solid #0d47a1;
-    padding: 8px 12px; /* Уменьшил отступы */
-}
-
-/* Выравнивание синего блока */
-.safety .rules-list li {
-    justify-content: left;
-    text-align: left;
-}
-
-/* Адаптация для мобильных */
-@media (max-width: 768px) {
     .rules-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 12px; /* Увеличиваем отступы между блоками */
+        max-width: 95%; /* Немного расширяем контейнер */
+        margin: auto;
     }
-
+    
     .rules-block {
-        width: 90%;
-        max-width: 320px;
+        background: #ffe6e6;
+        border-left: 6px solid #d9534f;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        max-width: 500px; /* Расширил блок */
+        margin: 0 auto;
     }
-}
-        .yacht-description {
-    max-width: 800px;
-    margin: 1rem auto;
-    padding: 0 1rem;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}
-
-/* Заголовки */
-.compact-title {
-    font-size: 1.5rem;
-    color: #2d3748;
-    margin: 1rem 0;
-    text-align: center;
-}
-
-.compact-intro {
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 1rem 0;
-    color: #4a5568;
-}
-
-/* Грид для удобств и ограничений */
-.compact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-}
-
-/* Заголовки блоков */
-.compact-block h3 {
-    font-size: 1.1rem;
-    color: #2b6cb0;
-    margin: 1rem 0 0.5rem;
-    padding-bottom: 0.3rem;
-    border-bottom: 2px solid #cbd5e0;
-}
-
-/* Общий стиль списков */
-.compact-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.compact-list li {
-    display: flex;
-    align-items: center;
-    font-size: 0.9rem;
-    padding: 0.4rem 0;
-    color: #4a5568;
-}
-
-/* Иконки в списках */
-.sm-icon {
-    font-size: 1rem;
-    margin-right: 0.7rem;
-    min-width: 25px;
-}
-
-/* Блок запретов */
-.compact-restrictions {
-    background: none;
-    border: none;
-    padding: 0.7rem;
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
-    color: #c53030;
-    font-weight: bold;
-}
-
-/* Блок разрешений */
-.compact-allowed {
-    background: none;
-    border: none;
-    padding: 0.7rem;
-    margin: 0.5rem 0 1rem;
-    font-size: 0.9rem;
-    color: #2f855a;
-    font-weight: bold;
-}
-
-/* Адаптация */
-@media (max-width: 480px) {
+    
+    .rules-title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #d9534f;
+        text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .rules-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .rules-list li {
+        display: flex;
+        align-items: flex-start;
+        font-size: 16px;
+        margin-bottom: 6px;
+        line-height: 1.5;
+    }
+    
+    .icon {
+        font-size: 18px;
+        margin-right: 10px;
+        min-width: 24px;
+    }
+    
+    /* Делаем адаптацию для телефонов */
+    @media (max-width: 480px) {
+        .rules-block {
+            max-width: 95%; /* Даем блокам больше пространства на мобильных */
+        }
+    
+        .rules-title {
+            font-size: 1.3rem;
+        }
+    
+        .rules-list li {
+            font-size: 1rem; /* Чуть уменьшаем размер на маленьких экранах */
+        }
+    
+        .icon {
+            font-size: 1.4rem;
+        }
+    }
+    
+    
+    .rules-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Выравниваем текст по левому краю */
+        max-width: 95%; /* Чуть увеличим ширину, но не слишком */
+        padding: 10px 15px; /* Оптимальные отступы */
+        font-size: 0.9rem; /* Немного уменьшим размер шрифта */
+        line-height: 1.4; /* Делаем расстояние между строками приятным */
+    }
+    
+    .rules-item {
+        display: flex;
+        align-items: center; /* Выравниваем иконки и текст */
+        gap: 10px; /* Отступ между иконкой и текстом */
+    }
+    
+    .rules-item:last-child {
+        flex-wrap: wrap; /* Позволяет длинному тексту красиво переноситься */
+        max-width: 100%; /* Запрещаем сжатие блока */
+    }
+    
+    .rules-item span {
+        flex-shrink: 0; /* Иконка не сжимается */
+        font-size: 1.2rem; /* Немного увеличим размер иконок */
+        min-width: 25px; /* Чтобы иконка всегда была ровно */
+    }
+    
+    .rules-list li .icon {
+        flex-shrink: 0; /* Запрещаем иконке сжиматься */
+        width: 22px; /* Оптимальный размер для четкого выравнивания */
+        height: 22px;
+        text-align: center;
+    }
+    
+    .rules-list li .text {
+        flex-grow: 1; /* Растягиваем текст, чтобы он ровно вставал */
+        max-width: 100%; /* Запрещаем выходить за пределы блока */
+        overflow: hidden; /* Обрезаем длинный текст */
+        text-overflow: ellipsis; /* Добавляем ... если текст слишком длинный */
+    }
+    
+    /* Иконки */
+    .icon {
+        font-size: 1.2rem;
+        min-width: 25px;
+        display: inline-block;
+        margin-right: 6px;
+        text-align: center;
+    }
+    
+    /* Цвета и оформление */
+    .allowed {
+        background: #e6f4ea;
+        border-left: 4px solid #2f855a;
+        padding: 8px 12px; /* Уменьшил отступы */
+    }
+    
+    .prohibited {
+        background: #ffebee;
+        border-left: 4px solid #b71c1c;
+        padding: 8px 12px; /* Уменьшил отступы */
+    }
+    
+    .safety {
+        background: #e3f2fd;
+        border-left: 4px solid #0d47a1;
+        padding: 8px 12px; /* Уменьшил отступы */
+    }
+    
+    /* Выравнивание синего блока */
+    .safety .rules-list li {
+        justify-content: left;
+        text-align: left;
+    }
+    
+    /* Адаптация для мобильных */
+    @media (max-width: 768px) {
+        .rules-container {
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .rules-block {
+            width: 90%;
+            max-width: 320px;
+        }
+    }
+            .yacht-description {
+        max-width: 800px;
+        margin: 1rem auto;
+        padding: 0 1rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    /* Заголовки */
     .compact-title {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+        color: #2d3748;
+        margin: 1rem 0;
+        text-align: center;
     }
-
+    
+    .compact-intro {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        margin: 1rem 0;
+        color: #4a5568;
+    }
+    
+    /* Грид для удобств и ограничений */
     .compact-grid {
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
     }
-
+    
+    /* Заголовки блоков */
+    .compact-block h3 {
+        font-size: 1.1rem;
+        color: #2b6cb0;
+        margin: 1rem 0 0.5rem;
+        padding-bottom: 0.3rem;
+        border-bottom: 2px solid #cbd5e0;
+    }
+    
+    /* Общий стиль списков */
+    .compact-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
     .compact-list li {
-        font-size: 0.85rem;
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        padding: 0.4rem 0;
+        color: #4a5568;
     }
-}
-    </style>
+    
+    /* Иконки в списках */
+    .sm-icon {
+        font-size: 1rem;
+        margin-right: 0.7rem;
+        min-width: 25px;
+    }
+    
+    /* Блок запретов */
+    .compact-restrictions {
+        background: none;
+        border: none;
+        padding: 0.7rem;
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        color: #c53030;
+        font-weight: bold;
+    }
+    
+    /* Блок разрешений */
+    .compact-allowed {
+        background: none;
+        border: none;
+        padding: 0.7rem;
+        margin: 0.5rem 0 1rem;
+        font-size: 0.9rem;
+        color: #2f855a;
+        font-weight: bold;
+    }
+    
+    /* Адаптация */
+    @media (max-width: 480px) {
+        .compact-title {
+            font-size: 1.3rem;
+        }
+    
+        .compact-grid {
+            gap: 1rem;
+        }
+    
+        .compact-list li {
+            font-size: 0.85rem;
+        }
+    }
+        </style>
     
     <!-- Футер -->
 <footer class="company-footer">
