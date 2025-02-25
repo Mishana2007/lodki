@@ -1,29 +1,41 @@
-/* Подключаем премиальные шрифты */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&family=Lexend:wght@700&display=swap');
+/* ✅ Подключаем премиальные шрифты */
+/* Импортируем только нужные шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@400;700&family=Raleway:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
 
-/* Базовые стили */
+/* ✅ Базовые стили */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif; /* Современный и читаемый основной шрифт */
-}
-
-/* Заголовки, логотип */
-/* Подключаем новый шрифт */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@400;700&display=swap');
-
-/* Заголовки, логотип */
-h1, h2, h3, .logo {
     font-family: 'Poppins', sans-serif; /* Основной шрифт */
-    font-weight: 700;
-    letter-spacing: 0.5px;
 }
 
-/* Альтернативный стиль для премиального вида */
+/* ✅ Заголовки, логотип */
+h1, h2, h3, .logo {
+    font-family: 'Raleway', sans-serif !important; /* Стандартный шрифт для заголовков */
+}
+
+/* ✅ Специальный стиль для h3[itemprop="name"] */
 h3[itemprop="name"] {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif !important; /* Новый шрифт для лучшей читаемости */
     font-weight: 700;
+    font-size: 22px; /* Чуть увеличил размер */
+    color: #222; /* Более контрастный цвет */
+    text-transform: uppercase; /* Чтобы смотрелось ровно */
+    letter-spacing: 0.5px; /* Улучшенная читаемость */
+}
+
+/* ✅ Общий стиль для h3 */
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+/* ✅ Адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    h3[itemprop="name"] {
+        font-size: 18px; /* Чуть меньше на мобильных */
+    }
 }
 
 /* Цена */
@@ -83,6 +95,10 @@ body {
         padding: 0.6rem 1.5rem; /* Уменьшаем отступы на мобильных */
     }
 }
+
+
+
+
 
 .nav-container {
     max-width: 1200px;
@@ -346,6 +362,17 @@ z-index: 1000;
         font-size: 1.3rem;
         bottom: 8%; /* Чуть выше */
     }
+}
+
+
+.contact-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .advantages {
