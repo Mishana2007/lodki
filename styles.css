@@ -366,16 +366,44 @@ z-index: 1000;
 }
 
 
+
+
 .catalog-photo {
     display: none;
     width: 100%;
     height: auto;
+    border-radius: 10px;
     object-fit: cover;
 }
 
-/* Показываем только активное фото */
 .catalog-photo.active {
     display: block;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
 }
 
 
