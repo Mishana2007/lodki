@@ -366,6 +366,19 @@ z-index: 1000;
 }
 
 
+.catalog-photo {
+    display: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Показываем только активное фото */
+.catalog-photo.active {
+    display: block;
+}
+
+
 .contact-title {
     text-align: center;
     font-size: 18px;
