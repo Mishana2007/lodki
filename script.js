@@ -348,3 +348,79 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".catalog-item").forEach((item) => {
+        const images = item.querySelectorAll(".catalog-photo");
+        const prevBtn = item.querySelector(".prev-btn");
+        const nextBtn = item.querySelector(".next-btn");
+
+        let currentIndex = 0;
+
+        function updateImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle("active", i === index);
+            });
+        }
+
+        prevBtn.addEventListener("click", (event) => {
+            event.stopPropagation();
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateImage(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", (event) => {
+            event.stopPropagation();
+            currentIndex = (currentIndex + 1) % images.length;
+            updateImage(currentIndex);
+        });
+
+        updateImage(currentIndex);
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".catalog-item").forEach((item) => {
+        const images = item.querySelectorAll(".catalog-photo");
+        const prevBtn = item.querySelector(".prev-btn");
+        const nextBtn = item.querySelector(".next-btn");
+        const detailsBtn = item.querySelector(".btn-details");
+        const rentBtn = item.querySelector(".btn-rent");
+
+        let currentIndex = 0;
+
+        function updateImage(index) {
+            images.forEach((img, i) => img.classList.toggle("active", i === index));
+        }
+
+        prevBtn.addEventListener("click", (event) => {
+            event.stopPropagation();
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateImage(currentIndex);
+        });
+
+        nextBtn.addEventListener("click", (event) => {
+            event.stopPropagation();
+            currentIndex = (currentIndex + 1) % images.length;
+            updateImage(currentIndex);
+        });
+
+        // Клик по карточке (переброс на страницу)
+        item.addEventListener("click", (event) => {
+            // Проверяем, был ли клик по кнопке (чтобы не мешать работе кнопок)
+            if (!event.target.closest(".prev-btn") && 
+                !event.target.closest(".next-btn") && 
+                !event.target.closest(".btn-details") && 
+                !event.target.closest(".btn-rent")) {
+                    
+                // Получаем название яхты из data-yacht атрибута или заголовка
+                let yachtPage = detailsBtn?.getAttribute("href") || "#";
+                window.location.href = yachtPage;
+            }
+        });
+
+        updateImage(currentIndex);
+    });
+});
