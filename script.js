@@ -257,6 +257,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".catalog-item").forEach((item) => {
+        try {
+            const images = item.querySelectorAll(".catalog-photo");
+            let currentIndex = 0;
+
+            if (!images.length) {
+                console.warn("❌ Ошибка: нет изображений в карточке:", item);
+                return;
+            }
+
+            function updateImage(index) {
+                images.forEach((img, i) => {
+                    img.classList.toggle("active", i === index);
+                });
+            }
+
+            item.querySelector(".prev-btn").addEventListener("click", (event) => {
+                event.stopPropagation();
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updateImage(currentIndex);
+            });
+
+            item.querySelector(".next-btn").addEventListener("click", (event) => {
+                event.stopPropagation();
+                currentIndex = (currentIndex + 1) % images.length;
+                updateImage(currentIndex);
+            });
+
+            updateImage(currentIndex);
+        } catch (error) {
+            console.error("Ошибка при перелистывании изображений:", error);
+        }
+    });
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".catalog-item").forEach((item) => {
         const mainImage = item.querySelector(".catalog-photo");
@@ -278,7 +315,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const images = {
             "HERMES": ["yacht-hecmes.jpg", "yacht-hecmes2.jpg", "yacht-hecmes3.jpg", "yacht-hecmes4.jpg"],
             "ECLIPSE": ["ECLIPSE.jpg", "ECLIPSE1.jpg", "ECLIPSE2.jpg", "ECLIPSE3.jpg", "ECLIPSE4.JPG", "ECLIPSE5.JPG", "ECLIPSE6.JPG", "ECLIPSE7.JPG", "ECLIPSE8.JPG", "ECLIPSE9.JPG", "ECLIPSE10.JPG", "ECLIPSE11.JPG"],
-            "Катер Velvette": ["VELVETTE.jpg", "VELVETTE1.jpg", "VELVETTE2.jpg", "VELVETTE3.jpg"]
+            "Катер Velvette": ["VELVETTE.jpg", "VELVETTE1.jpg", "VELVETTE2.jpg", "VELVETTE3.jpg", "VELVETTE4.JPG", "VELVETTE5.JPG" ]
         };
 
         if (!images[yachtName] || images[yachtName].length === 0) return;
