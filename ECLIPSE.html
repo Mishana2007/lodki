@@ -691,7 +691,7 @@
 <section class="yacht-slider">
     <div class="slider-container">
         <div class="slider-track" id="sliderTrack">
-            <img src="ECLIPSE1.jpg" class="slider-image">
+            <img src="ECLIPSE1.jpg" class="slider-image active">
             <img src="ECLIPSE2.jpg" class="slider-image">
             <img src="ECLIPSE3.jpg" class="slider-image">
             <img src="ECLIPSE4.jpg" class="slider-image">
@@ -707,7 +707,7 @@
 
     <!-- Миниатюры (8 фото в 2 ряда) -->
     <div class="thumbnails-grid" id="thumbnailsGrid">
-        <img src="ECLIPSE1.jpg" class="thumbnail" data-index="0">
+        <img src="ECLIPSE1.jpg" class="thumbnail active" data-index="0">
         <img src="ECLIPSE2.jpg" class="thumbnail" data-index="1">
         <img src="ECLIPSE3.jpg" class="thumbnail" data-index="2">
         <img src="ECLIPSE4.jpg" class="thumbnail" data-index="3">
@@ -719,107 +719,113 @@
 </section>
 
 <style>
-    /* Основной контейнер */
-    .yacht-slider {
-        text-align: center;
-        max-width: 900px;
-        margin: auto;
-        padding: 20px 0;
-        position: relative;
-        margin-top: 40px;
-    }
-    
-    /* Обертка слайдера */
+/* Основной контейнер */
+.yacht-slider {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 0;
+    position: relative;
+    margin-top: 40px;
+}
+
+/* Обертка слайдера */
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    position: relative;
+    touch-action: pan-y;
+}
+
+/* Лента изображений */
+.slider-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+}
+
+/* Улучшенное качество изображений */
+.slider-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    max-height: 500px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+    display: none;
+}
+
+/* Отображаем только активное изображение */
+.slider-image.active {
+    display: block;
+}
+
+/* Миниатюры (8 фото в 2 ряда) */
+.thumbnails-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    max-width: 400px;
+    margin: 15px auto;
+}
+
+/* Миниатюры */
+.thumbnail {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.2s;
+    border: 2px solid transparent;
+}
+
+/* Выбранное фото */
+.thumbnail.active {
+    border-color: #4caf50;
+    transform: scale(1.1);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
     .slider-container {
-        overflow: hidden;
-        width: 100%;
-        max-width: 800px;
         height: auto;
-        position: relative;
-        touch-action: pan-y;
     }
-    
-    /* Лента изображений */
-    .slider-track {
-        display: flex;
-        transition: transform 0.4s ease-in-out;
-        will-change: transform;
-    }
-    
-    /* Улучшенное качество изображений */
     .slider-image {
-        width: 100%;
-        max-width: 800px;
         height: auto;
-        max-height: 500px;
-        flex-shrink: 0;
-        border-radius: 10px;
-        object-fit: cover;
-        user-select: none;
-        pointer-events: none;
+        max-height: 300px;
     }
-    
-    /* Миниатюры (8 фото в 2 ряда) */
     .thumbnails-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
-        max-width: 400px;
-        margin: 15px auto;
+        max-width: 320px;
     }
-    
-    /* Миниатюры */
     .thumbnail {
-        width: 90px;
-        height: 60px;
-        object-fit: cover;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: transform 0.2s, opacity 0.2s;
-        border: 2px solid transparent;
+        width: 70px;
+        height: 50px;
     }
-    
-    /* Выбранное фото */
-    .thumbnail.active {
-        border-color: #4caf50;
-        transform: scale(1.1);
+}
+
+@media (max-width: 480px) {
+    .slider-container {
+        height: auto;
     }
-    
-    /* Адаптация для мобильных */
-    @media (max-width: 768px) {
-        .slider-container {
-            height: auto;
-        }
-        .slider-image {
-            height: auto;
-            max-height: 300px;
-        }
-        .thumbnails-grid {
-            max-width: 320px;
-        }
-        .thumbnail {
-            width: 70px;
-            height: 50px;
-        }
+    .slider-image {
+        height: auto;
+        max-height: 250px;
     }
-    
-    @media (max-width: 480px) {
-        .slider-container {
-            height: auto;
-        }
-        .slider-image {
-            height: auto;
-            max-height: 250px;
-        }
-        .thumbnails-grid {
-            max-width: 280px;
-        }
-        .thumbnail {
-            width: 65px;
-            height: 45px;
-        }
+    .thumbnails-grid {
+        max-width: 280px;
     }
-    </style>
+    .thumbnail {
+        width: 65px;
+        height: 45px;
+    }
+}
+</style>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -842,8 +848,7 @@ document.addEventListener("DOMContentLoaded", function () {
             currentIndex = index;
         }
 
-        let offset = -currentIndex * 100;
-        sliderTrack.style.transform = `translateX(${offset}%)`;
+        images.forEach((img, i) => img.classList.toggle("active", i === currentIndex));
 
         // Подсветка миниатюры
         thumbnails.forEach(thumb => thumb.classList.remove("active"));
@@ -866,12 +871,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Конец свайпа
     sliderTrack.addEventListener("touchend", function () {
+        if (!isDragging) return;
         isDragging = false;
+
         if (moveX < -50) {
-            changeSlide(currentIndex + 1);
+            changeSlide(currentIndex + 1); // Свайп влево
         } else if (moveX > 50) {
-            changeSlide(currentIndex - 1);
+            changeSlide(currentIndex - 1); // Свайп вправо
         }
+
+        moveX = 0; // Сбрасываем значение moveX
     });
 
     // Листаем мышкой (ПК)
@@ -888,11 +897,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("mouseup", function () {
         if (!isDragging) return;
         isDragging = false;
+
         if (moveX < -50) {
-            changeSlide(currentIndex + 1);
+            changeSlide(currentIndex + 1); // Перетаскивание влево
         } else if (moveX > 50) {
-            changeSlide(currentIndex - 1);
+            changeSlide(currentIndex - 1); // Перетаскивание вправо
         }
+
+        moveX = 0; // Сбрасываем значение moveX
     });
 
     // Клик по миниатюре
@@ -903,10 +915,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Бесконечный цикл (автопрокрутка)
-    setInterval(() => {
-        changeSlide(currentIndex + 1);
-    }, 5000);
+    changeSlide(currentIndex); // Устанавливаем первое фото
 });
 </script>
 
